@@ -1,341 +1,543 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">-->
+<!--<html>-->
+
+<!--<head>-->
+<!--    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">-->
+<!--    <style id="stndz-style"></style>-->
+<!--    <meta name="viewport" content="width=800">-->
+<!--    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">-->
+<!--    <style type="text/css">-->
+<!--    a {-->
+<!--        color: #1772d0;-->
+<!--        text-decoration: none;-->
+<!--    }-->
+
+<!--    a:focus,-->
+<!--    a:hover {-->
+<!--        color: #f09228;-->
+<!--        text-decoration: none;-->
+<!--    }-->
+
+<!--    table.subsection td {-->
+<!--        padding: 10px 20px 10px 20px;-->
+<!--    }-->
+
+<!--    table.projectSubsection td {-->
+<!--        padding: 20px 20px 20px 20px;-->
+<!--    }-->
+
+<!--    table.oneLineSubsection td {-->
+<!--        padding: 0px 20px 0px 20px;-->
+<!--    }-->
+
+<!--    img.auto {-->
+<!--        max-width: 100%;-->
+<!--        max-height: 100%;-->
+<!--    }-->
+
+<!--    body,-->
+<!--    td,-->
+<!--    th,-->
+<!--    tr,-->
+<!--    p,-->
+<!--    a {-->
+<!--        font-family: 'Lato', Verdana, Helvetica, sans-serif;-->
+<!--        font-size: 14px-->
+<!--    }-->
+
+<!--    strong {-->
+<!--        font-family: 'Lato', Verdana, Helvetica, sans-serif;-->
+<!--        font-size: 14px;-->
+<!--    }-->
+
+<!--    heading {-->
+<!--        font-family: 'Lato', Verdana, Helvetica, sans-serif;-->
+<!--        font-size: 22px;-->
+<!--    }-->
+
+<!--    name {-->
+<!--        font-family: 'Lato', Verdana, Helvetica, sans-serif;-->
+<!--        font-size: 32px;-->
+<!--    }-->
+
+<!--    span.highlight {-->
+<!--        background-color: #ffffd0;-->
+<!--    }-->
+<!--    </style>-->
+<!--    &lt;!&ndash; <link rel="shortcut icon" href="./source/icon.png"> &ndash;&gt;-->
+<!--    <title>Xiangyu Liu's Homepage</title>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--    <table width="800" cellpadding="20px" align="center">-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                <table class="subsection">-->
+<!--                    <tr>-->
+<!--                        <td width="30%">-->
+<!--                        <img src="./source/xiangyuliu.png" width="100%">-->
+<!--                        </td>-->
+<!--                        <td width="70%" valign="middle">-->
+<!--                            <p align="center">-->
+<!--                                <name>Xiangyu Liu</name>-->
+<!--                            </p>-->
+<!--                            <p>Hi, my name is Xiangyu Liu. I am currently a third-year student at Shanghai Jiao Tong University, China, majoring in Computer Science. I am also a member of Zhiyuan Honors Program of Engineering, which is an elite program for top 5% talented students.</p>-->
+<!--                            <p align="center">-->
+<!--                            <a href="source/resume2.pdf">CV</a> &nbsp;/&nbsp;-->
+<!--                            &lt;!&ndash; <a href="blog/index.html">Blogs</a> &nbsp;/&nbsp; &ndash;&gt;-->
+<!--                            <a href="https://github.com/xiangyu-liu">GitHub</a>-->
+<!--                            &lt;!&ndash; <a href="https://www.linkedin.com/">LinkedIn</a> &ndash;&gt;-->
+<!--                            </p>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                &lt;!&ndash; Contact me &ndash;&gt;-->
+<!--                <heading>Contact me</heading>-->
+<!--                <table class="subsection">-->
+<!--                    <tr>-->
+<!--                        <td style="vertical-align: top;"><b>Email</b></td>-->
+<!--                        <td style="padding-left: 50px;">-->
+<!--                            liuxiangyu999[AT]sjtu[DOT]edu[DOT]cn<br>-->
+<!--                            xiangyuliu[AT]berkeley[DOT]edu-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                &lt;!&ndash; Education &ndash;&gt;-->
+<!--                <heading>Education</heading>-->
+<!--                <table class="subsection">-->
+<!--                    <tbody>-->
+<!--                        <tr>-->
+<!--                            <td>-->
+<!--                                <p><strong>Shanghai Jiao Tong University</strong>, China, from Sep. 2017 to present<br>-->
+<!--                                    Department of Computer Science & Zhiyuan College</p>-->
+<!--                            </td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>-->
+<!--                                <p><strong>University of California, Berkeley</strong>, USA, from Jan. 2020 to Present<br>-->
+<!--                                    Exchange Student</p>-->
+<!--                            </td>-->
+<!--                        </tr>-->
+<!--                    </tbody>-->
+<!--                </table>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                &lt;!&ndash; Experience &ndash;&gt;-->
+<!--                <heading>Experience</heading>-->
+<!--                <table class="subsection">-->
+<!--                    <tbody>-->
+<!--                        <tr>-->
+<!--                            <td>-->
+<!--                                <p><a href="http://apex.sjtu.edu.cn/"><strong>Apex Lab</strong></a>, Shanghai Jiao Tong University, China, from Mar. 2019 to Present<br>-->
+<!--                                    Research Assistant, advised by <a href="http://wnzhang.net/">Weinan Zhang</a> and <a href="https://scholar.google.com/citations?user=-84M1m0AAAAJ&hl=en">Yong Yu</a></a></p>-->
+<!--                                &lt;!&ndash; <ul> &ndash;&gt;-->
+<!--                                    &lt;!&ndash; <li>Asynchronous RPC Library (ARL): a high-throughput RPC system with node-level aggregation and single-node work-stealing.</li> &ndash;&gt;-->
+<!--                                    &lt;!&ndash; <li>RDMA vs. RPC for Implementing Distributed Data Structures</li> &ndash;&gt;-->
+<!--                                &lt;!&ndash; </ul> &ndash;&gt;-->
+<!--                            </td>-->
+<!--                        </tr>-->
+<!--                    </tbody>-->
+<!--                </table>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            &lt;!&ndash; <td> &ndash;&gt;-->
+<!--                &lt;!&ndash; Publication &ndash;&gt;-->
+<!--                &lt;!&ndash; <heading>Publication</heading>-->
+<!--                <table class="oneLineSubsection">-->
+<!--                    <tr>-->
+<!--                        <td>Benjamin Brock, Yuxin Chen, <strong>Jiakun Yan</strong>, John Owens, Aydın Buluç, and Katherine Yelick. "RDMA vs. RPC for Implementing Distributed Data Structures" to appear in Workshop on Irregular Applications: Architectures and Algorithms (IA<sup>3</sup>), 2019. [ <a href="ben-pub_bib.html#rdmavsrpc">bib</a> | <a href="https://arxiv.org/abs/1910.02158">preprint</a> ]</td>-->
+<!--                    </tr>-->
+<!--                </table> &ndash;&gt;-->
+<!--            &lt;!&ndash; </td> &ndash;&gt;-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                &lt;!&ndash; Research Interest&ndash;&gt;-->
+<!--                <heading>Research Interest</heading>-->
+<!--                <table class="subsection">-->
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                            &lt;!&ndash; <p><strong>Research Interest</strong><br> &ndash;&gt;-->
+<!--                            <p>My research interests lie in the general area of machine learning, particularly in deep learning,-->
+<!--                                reinforcement learning and deep unsupervised learning, as well as their applications in sequential-->
+<!--                                decision making and multi-agent systems</p>-->
+<!--                            &lt;!&ndash; <ul>-->
+<!--                                <li>Parallel Computing</li>-->
+<!--                                <li>Programming Language</li>-->
+<!--                                <li>Distributed System</li>-->
+<!--                            </ul>-->
+<!--                            <p>Specifically, I am particularly interested in developing programming systems for parallel computing to improve the performance and programmability of parallel applications.</p> &ndash;&gt;-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                &lt;!&ndash; Project &ndash;&gt;-->
+<!--                <heading>Project</heading>-->
+<!--                <table class="projectSubsection">-->
+<!--                	<tr>-->
+<!--                        <td width="25%" height="80%">-->
+<!--                            <img class="auto" src="./source/magent.png">-->
+<!--                        </td>-->
+<!--                        <td width="75%" valign="top">-->
+<!--                            <p><strong> Empathetic Reasoning in Multi-Agent Reinforcement Learning </strong>-->
+<!--                                Advised by <a href="http://wnzhang.net/">Weinan Zhang</a> and <a href="https://scholar.google.com/citations?user=-84M1m0AAAAJ&hl=en">Yong Yu</a>, Apex Lab, June 2019 - Sep. 2019<br>-->
+<!--                            	</p>-->
+<!--                            <p> We introduce the concept of empathy to symmetric Markov games where agents are able to reason the-->
+<!--                                evaluations and behaviours of other agents through their own models. Considering the mutual reasoning-->
+<!--                                between agents, the impact of empathy could be recursive. We propose a Q learning method with multi-level-->
+<!--                                empathetic reasoning for both competitive and cooperative environments.</p>-->
+<!--                            <p> We test our algorithm on a simple math game and <a href="https://github.com/geek-ai/MAgent">MAgent</a>. Our experiments demonstrate that empathetic reasoning improves the performance of standard Q-learners.-->
+<!--                                In cooperative environment, we can achieve the optimal solutions with the fastest speed. In competitive-->
+<!--                                environment, empathetic Q learners can easily defeat learners with only local rewards or only global rewards.</p>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td width="30%" height="80%">-->
+<!--                            <img class="auto" src="./source/vae_app.png">-->
+<!--                        </td>-->
+<!--                        <td width="75%" valign="top">-->
+<!--                            <p><strong>Characterizing Internet Hosts Using Deep Learning</strong><br>-->
+<!--                                advised by <a href="http://www.cs.sjtu.edu.cn/~yichao/pmwiki/pmwiki.php">Yichao Chen</a>, SJTU, Sep. 2019 - Dec. 2019<br></p>-->
+<!--                            <p>We develop a system to characterize Internet hosts using deep learning, leveraging Internet-->
+<!--                                scan data to produce numerical and lightweight representations of hosts. To do so, we first extract-->
+<!--                                binary tags from semi-structured texts collected from <a href="https://censys.io/"> Censys </a> then use the variational autoencoder (VAE) to construct-->
+<!--                                low-dimensional embeddings of our high-dimensional binary representations which do not rely-->
+<!--                                on specific applications. This universality makes the embeddings broadly applicable to a variety-->
+<!--                                of learning tasks whereby they can be used as input features. We present two such examples,-->
+<!--                                detecting and predicting malicious hosts, and unmasking hidden host attributes.</p>-->
+<!--                            <p> Comparing the trained models in their performance, speed, and robustness, we show that our embeddings-->
+<!--                                reports competitive performance compared with binary representations and can achieve-->
+<!--                                high accuracy for these learning tasks, while drastically reducing memory and computational-->
+<!--                                requirements for large-scale analysis.</p>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td width="25%">-->
+<!--                            <img class="auto" src="./source/diabetic.jpg">-->
+<!--                        </td>-->
+<!--                        <td width="75%" valign="top">-->
+<!--                            <p><strong>Diabetic Retinopathy Detection</strong><br>-->
+<!--                                <a href="https://github.com/xiangyu-liu/Binocular-Deep-Neural-Network-for-DR-Detection-Combined-with-Area-Extraction">github</a></p>-->
+<!--                            <p> We propose a brand new framework, binocular twin neural network architecture combined with-->
+<!--                                region detection and extraction. We use commonCNNmodels to extract features ,and then combine-->
+<!--                                features of the left eye and right eye.</p>-->
+<!--                            <p> We further introduce the prior knowledge that only early lesions, symptomatic microangiomas often-->
+<!--                                appear around the macular area of the unique structure of the fundus into deep neural networks,-->
+<!--                                concurrently train CNNs to extract the macular disc area to augment features for classifications.</p>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    &lt;!&ndash; <tr>-->
+<!--                        <td width="25%"><img class="auto" src="./source/highSpeedCellular.png"></td>-->
+<!--                        <td width="75%" valign="top">-->
+<!--                            <p><strong>High speed transmission system with Cellular and Wi-Fi hotspot</strong><br>-->
+<!--                                a parallel transmission system in Cellular environment<br>-->
+<!--                                advised by Prof. <a href="http://www.cs.sjtu.edu.cn/~linghe.kong/">Linghe Kong</a>, Oct. 2018 - Jan. 2019.</p>-->
+<!--                            <p>As the live video streaming grows rapidly, high-speed data transmission in the open field is increasingly demanding for high-quality video transmission. In this project, we proposed an innovate parallel data transmission system which combines Cellular network with wifi-hotspot to achieve high data transmission bandwidth.</p>-->
+<!--                            <p>Link aggregation is the primary idea underlying this system: the host device uses a Wi-Fi hotspot to connect several relay device. Then it is able to utilize the high bandwidth of Wi-Fi hotpot and transmit data with the Cellular links of all the devices in this system.</p>-->
+<!--                            <p>I developed the high-speed parallel transmission system as a real-world prototype system on the Android platform. I evaluated the system in real-world with 4 GigaBytes data transmission and gained 2.5X bandwidth with 4 devices.</p>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td width="25%"><img class="auto" src="./source/pptCtrl.png"></td>-->
+<!--                        <td width="75%" valign="top">-->
+<!--                            <p><strong>PPT Ctrl: an interactive PPT control APP</strong><br>-->
+<!--                                advised by Prof. <a href="http://www.cs.sjtu.edu.cn/~linghe.kong/">Linghe Kong</a>, Sep. 2018 - Dec. 2018.</p>-->
+<!--                            <p>PPT is a powerful media to convey ideas and share information in a broad array of scenarios. However, current PPT remote control tools are far from perfect. PPT Ctrl is a mobile application enabling people to control PPT in an interactive way. It has various functions including page switching, highlighting, magnifying, drawing, and real-time computer screen display.</p>-->
+<!--                            <p>I developed this system from scratch in a team of four students as the team leader. The system is based on Qt and Android platform.</p>-->
+<!--                            <p>This project won the first prize at the Chinese University Student Computer Application Ability Competition, 2019.</p>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td width="25%"><img class="auto" src="./source/videoRetrieval.png"></td>-->
+<!--                        <td width="75%" valign="top">-->
+<!--                            <p><strong>Video clip retrieval by natural language</strong>-->
+<!--                                <br>-->
+<!--                                advised by Prof. <a href="http://icne.sjtu.edu.cn/info/1061/1075.htm">Yi Xu</a>, Apr. 2018 - Oct. 2018 <br></p>-->
+<!--                            <p>Visual video and natural language understanding are two of the main efforts enabling computers to "think like humans". Video clip retrieval by natural language is an interdisciplinary task of these two fields. Its goal is: given a video and a query sentence, find the clip in the video described by the sentence.</p>-->
+<!--                            <p>In this project, we proposed a spatial-textual coattention network to establish the interactions between words and spatial regions. We evaluated our model on the DiDeMo dataset and outperformed state-of-the-art methods by a significant margin.</p>-->
+<!--                        </td>-->
+<!--                    </tr> &ndash;&gt;-->
+<!--                </table>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        &lt;!&ndash; <tr>-->
+<!--            <td> &ndash;&gt;-->
+<!--                &lt;!&ndash; Patent &ndash;&gt;-->
+<!--                &lt;!&ndash; <heading>Patent</heading>-->
+<!--                <table class="oneLineSubsection">-->
+<!--                    <tr>-->
+<!--                        <td><strong>Jiakun Yan</strong>, Jingzhu Shao, Zhen Huang, Yanzhou Xiang, Yutong Liao, Ruohan Hu, Jin Qi, Shuo Jiang, "A vibrating alarm clock based on pressure sensors", Utility model ZL 2017 2  1300094.X, China[<a href="source/patent.pdf">pdf</a>]</td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+<!--            </td>-->
+<!--        </tr> &ndash;&gt;-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                &lt;!&ndash; Scholarships &ndash;&gt;-->
+<!--                <heading>Scholarships and Awards</heading>-->
+<!--                <table class="oneLineSubsection">-->
+<!--                    <tr>-->
+<!--                        <td><strong>A-class Scholarship for Excellent Academic Performance</strong> Awarded to top 1% students in SJTU every year, Shanghai Jiao Tong University, 2018</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td><strong>National Scholarship</strong> Highest honor for undergraduates in China, awarded to top 0.2% students, Ministry of Education of China, 2018 & 2019</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td><strong>1st Prize in Chinese Mathematics Competitions</strong> The first place among students in SJTU, Chinese Mathematical Society, 2018</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td><strong>Zhiyuan Honorary Scholarship</strong> Elite program scholarship for top 5% talented students, Shanghai Jiao Tong University, 2018 and 2019</td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        &lt;!&ndash; <tr>-->
+<!--            <td> &ndash;&gt;-->
+<!--                &lt;!&ndash; Awards &ndash;&gt;-->
+<!--                &lt;!&ndash; <heading>Awards</heading>-->
+<!--                <table class="oneLineSubsection">-->
+<!--                    <tr>-->
+<!--                    	<td><strong>The First Price</strong>, Chinese University Student Computer Application Ability Competition, 2019</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td><strong>Meritorious Winner</strong>, <a href="https://www.comap.com/undergraduate/contests/mcm/">Mathematical Contest in Modeling</a>, 2018</td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+<!--            </td>-->
+<!--        </tr> &ndash;&gt;-->
+<!--        &lt;!&ndash; <tr>-->
+<!--            <td> &ndash;&gt;-->
+<!--                &lt;!&ndash; Something &ndash;&gt;-->
+<!--                &lt;!&ndash; <heading>Something more about me</heading>-->
+<!--                <table class="subsection">-->
+<!--                    <tr>-->
+<!--                        <td>-->
+<!--                        I currently believe in rationality and emotional neutrality. I said "currently" because I also believe in lifelong development. Amazed by the beauty in logic and infinite possibility, I chose computer science as my major. Deciding to devote my life to an area I love, I have explored different areas of computer science, namely, artificial intelligence, computer networks, programming languages, and parallel computing in chronological order. In the process of my exploration, I found my interest gradually converging to computer systems and very likely programming languages and parallel computing. I am now applying for CS Ph.D. programs starting in Fall 2020.-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+<!--            </td>-->
+<!--        </tr> &ndash;&gt;-->
+<!--    </table>-->
+<!--     <a href="https://clustrmaps.com/site/1b75x"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=4aWhnwzAzyImUEVCxfAPpo_o1_3b6QH1ziUd__e0uqQ&cl=ffffff" /></a> -->
+<!--    <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=StXondYq_w8ojUa57wKQnxoPk4w3tnxrzlmn_YQHtdA&cl=ffffff&w=a"></script>-->
+<!--     <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=4aWhnwzAzyImUEVCxfAPpo_o1_3b6QH1ziUd__e0uqQ&cl=ffffff&w=a"></script>-->
+<!--</body>-->
+
+<!--</html>-->
+<!DOCTYPE html>
 <html>
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
-    <style id="stndz-style"></style>
-    <meta name="viewport" content="width=800">
-    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-    <style type="text/css">
-    a {
-        color: #1772d0;
-        text-decoration: none;
-    }
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    a:focus,
-    a:hover {
-        color: #f09228;
-        text-decoration: none;
-    }
-
-    table.subsection td {
-        padding: 10px 20px 10px 20px;
-    }
-
-    table.projectSubsection td {
-        padding: 20px 20px 20px 20px;
-    }
-
-    table.oneLineSubsection td {
-        padding: 0px 20px 0px 20px;
-    }
-
-    img.auto {
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    body,
-    td,
-    th,
-    tr,
-    p,
-    a {
-        font-family: 'Lato', Verdana, Helvetica, sans-serif;
-        font-size: 14px
-    }
-
-    strong {
-        font-family: 'Lato', Verdana, Helvetica, sans-serif;
-        font-size: 14px;
-    }
-
-    heading {
-        font-family: 'Lato', Verdana, Helvetica, sans-serif;
-        font-size: 22px;
-    }
-
-    name {
-        font-family: 'Lato', Verdana, Helvetica, sans-serif;
-        font-size: 32px;
-    }
-
-    span.highlight {
-        background-color: #ffffd0;
-    }
-    </style>
-    <!-- <link rel="shortcut icon" href="./source/icon.png"> -->
-    <title>Xiangyu Liu's Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiangyu Liu</title>
+    <link rel="stylesheet" href="style.css">
+    <style></style>
 </head>
 
 <body>
-    <table width="800" cellpadding="20px" align="center">
-        <tr>
-            <td>
-                <table class="subsection">
-                    <tr>
-                        <td width="30%">
-                        <img src="./source/xiangyuliu.png" width="100%">
-                        </td>
-                        <td width="70%" valign="middle">
-                            <p align="center">
-                                <name>Xiangyu Liu</name>
-                            </p>
-                            <p>Hi, my name is Xiangyu Liu. I am currently a third-year student at Shanghai Jiao Tong University, China, majoring in Computer Science. I am also a member of Zhiyuan Honors Program of Engineering, which is an elite program for top 5% talented students.</p>
-                            <p align="center">
-                            <a href="source/resume2.pdf">CV</a> &nbsp;/&nbsp;
-                            <!-- <a href="blog/index.html">Blogs</a> &nbsp;/&nbsp; -->
+<table id="main-table">
+    <tbody>
+    <tr>
+        <td>
+            <table class="sub-table">
+                <tbody>
+                <tr>
+                    <td class="td-with-padding">
+                        <p class="p-center" id="name">
+                            <name>Xiangyu Liu</name>
+                        </p>
+                        <p>
+                            I am a senior year undergraduate in Computer Science <a
+                                href="http://www.cs.sjtu.edu.cn/en/">Shanghai Jiao Tong University</a>.
+                            My research interests lie in the broad area of <span
+                                class="emphasis">machine learning</span>, particularly in <span class="emphasis">reinforcement learning</span>
+                            and <span class="emphasis">multi-agent systems</span>.
+                        </p>
+                        <p>
+                            Currently, I am actively applying for 2021 Fall CS PhD program.
+                        </p>
+                        <p class="p-center">
+                            <a href="mailto:liuxiangyu999@sjtu.edu.cn">Email</a> &nbsp/&nbsp
+                            <a href="https://desire999.github.io/">CV</a> &nbsp/&nbsp
                             <a href="https://github.com/xiangyu-liu">GitHub</a>
-                            <!-- <a href="https://www.linkedin.com/">LinkedIn</a> -->
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <!-- Contact me -->
-                <heading>Contact me</heading>
-                <table class="subsection">
-                    <tr>
-                        <td style="vertical-align: top;"><b>Email</b></td>
-                        <td style="padding-left: 50px;">
-                            liuxiangyu999[AT]sjtu[DOT]edu[DOT]cn<br>
-                            xiangyuliu[AT]berkeley[DOT]edu
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <!-- Education -->
-                <heading>Education</heading>
-                <table class="subsection">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <p><strong>Shanghai Jiao Tong University</strong>, China, from Sep. 2017 to present<br>
-                                    Department of Computer Science & Zhiyuan College</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><strong>University of California, Berkeley</strong>, USA, from Jan. 2020 to Present<br>
-                                    Exchange Student</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <!-- Experience -->
-                <heading>Experience</heading>
-                <table class="subsection">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <p><a href="http://apex.sjtu.edu.cn/"><strong>Apex Lab</strong></a>, Shanghai Jiao Tong University, China, from Mar. 2019 to Present<br>
-                                    Research Assistant, advised by <a href="http://wnzhang.net/">Weinan Zhang</a> and <a href="https://scholar.google.com/citations?user=-84M1m0AAAAJ&hl=en">Yong Yu</a></a></p>
-                                <!-- <ul> -->
-                                    <!-- <li>Asynchronous RPC Library (ARL): a high-throughput RPC system with node-level aggregation and single-node work-stealing.</li> -->
-                                    <!-- <li>RDMA vs. RPC for Implementing Distributed Data Structures</li> -->
-                                <!-- </ul> -->
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <!-- <td> -->
-                <!-- Publication -->
-                <!-- <heading>Publication</heading>
-                <table class="oneLineSubsection">
-                    <tr>
-                        <td>Benjamin Brock, Yuxin Chen, <strong>Jiakun Yan</strong>, John Owens, Aydın Buluç, and Katherine Yelick. "RDMA vs. RPC for Implementing Distributed Data Structures" to appear in Workshop on Irregular Applications: Architectures and Algorithms (IA<sup>3</sup>), 2019. [ <a href="ben-pub_bib.html#rdmavsrpc">bib</a> | <a href="https://arxiv.org/abs/1910.02158">preprint</a> ]</td>
-                    </tr>
-                </table> -->
-            <!-- </td> -->
-        </tr>
-        <tr>
-            <td>
-                <!-- Research Interest-->
-                <heading>Research Interest</heading>
-                <table class="subsection">
-                    <tr>
-                        <td>
-                            <!-- <p><strong>Research Interest</strong><br> -->
-                            <p>My research interests lie in the general area of machine learning, particularly in deep learning,
-                                reinforcement learning and deep unsupervised learning, as well as their applications in sequential
-                                decision making and multi-agent systems</p>
-                            <!-- <ul>
-                                <li>Parallel Computing</li>
-                                <li>Programming Language</li>
-                                <li>Distributed System</li>
-                            </ul>
-                            <p>Specifically, I am particularly interested in developing programming systems for parallel computing to improve the performance and programmability of parallel applications.</p> -->
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <!-- Project -->
-                <heading>Project</heading>
-                <table class="projectSubsection">
-                	<tr>
-                        <td width="25%" height="80%">
-                            <img class="auto" src="./source/magent.png">
-                        </td>
-                        <td width="75%" valign="top">
-                            <p><strong> Empathetic Reasoning in Multi-Agent Reinforcement Learning </strong>
-                                Advised by <a href="http://wnzhang.net/">Weinan Zhang</a> and <a href="https://scholar.google.com/citations?user=-84M1m0AAAAJ&hl=en">Yong Yu</a>, Apex Lab, June 2019 - Sep. 2019<br>
-                            	</p>
-                            <p> We introduce the concept of empathy to symmetric Markov games where agents are able to reason the
-                                evaluations and behaviours of other agents through their own models. Considering the mutual reasoning
-                                between agents, the impact of empathy could be recursive. We propose a Q learning method with multi-level
-                                empathetic reasoning for both competitive and cooperative environments.</p>
-                            <p> We test our algorithm on a simple math game and <a href="https://github.com/geek-ai/MAgent">MAgent</a>. Our experiments demonstrate that empathetic reasoning improves the performance of standard Q-learners.
-                                In cooperative environment, we can achieve the optimal solutions with the fastest speed. In competitive
-                                environment, empathetic Q learners can easily defeat learners with only local rewards or only global rewards.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="30%" height="80%">
-                            <img class="auto" src="./source/vae_app.png">
-                        </td>
-                        <td width="75%" valign="top">
-                            <p><strong>Characterizing Internet Hosts Using Deep Learning</strong><br>
-                                advised by <a href="http://www.cs.sjtu.edu.cn/~yichao/pmwiki/pmwiki.php">Yichao Chen</a>, SJTU, Sep. 2019 - Dec. 2019<br></p>
-                            <p>We develop a system to characterize Internet hosts using deep learning, leveraging Internet
-                                scan data to produce numerical and lightweight representations of hosts. To do so, we first extract
-                                binary tags from semi-structured texts collected from <a href="https://censys.io/"> Censys </a> then use the variational autoencoder (VAE) to construct
-                                low-dimensional embeddings of our high-dimensional binary representations which do not rely
-                                on specific applications. This universality makes the embeddings broadly applicable to a variety
-                                of learning tasks whereby they can be used as input features. We present two such examples,
-                                detecting and predicting malicious hosts, and unmasking hidden host attributes.</p>
-                            <p> Comparing the trained models in their performance, speed, and robustness, we show that our embeddings
-                                reports competitive performance compared with binary representations and can achieve
-                                high accuracy for these learning tasks, while drastically reducing memory and computational
-                                requirements for large-scale analysis.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="25%">
-                            <img class="auto" src="./source/diabetic.jpg">
-                        </td>
-                        <td width="75%" valign="top">
-                            <p><strong>Diabetic Retinopathy Detection</strong><br>
-                                <a href="https://github.com/xiangyu-liu/Binocular-Deep-Neural-Network-for-DR-Detection-Combined-with-Area-Extraction">github</a></p>
-                            <p> We propose a brand new framework, binocular twin neural network architecture combined with
-                                region detection and extraction. We use commonCNNmodels to extract features ,and then combine
-                                features of the left eye and right eye.</p>
-                            <p> We further introduce the prior knowledge that only early lesions, symptomatic microangiomas often
-                                appear around the macular area of the unique structure of the fundus into deep neural networks,
-                                concurrently train CNNs to extract the macular disc area to augment features for classifications.</p>
-                        </td>
-                    </tr>
-                    <!-- <tr>
-                        <td width="25%"><img class="auto" src="./source/highSpeedCellular.png"></td>
-                        <td width="75%" valign="top">
-                            <p><strong>High speed transmission system with Cellular and Wi-Fi hotspot</strong><br>
-                                a parallel transmission system in Cellular environment<br>
-                                advised by Prof. <a href="http://www.cs.sjtu.edu.cn/~linghe.kong/">Linghe Kong</a>, Oct. 2018 - Jan. 2019.</p>
-                            <p>As the live video streaming grows rapidly, high-speed data transmission in the open field is increasingly demanding for high-quality video transmission. In this project, we proposed an innovate parallel data transmission system which combines Cellular network with wifi-hotspot to achieve high data transmission bandwidth.</p>
-                            <p>Link aggregation is the primary idea underlying this system: the host device uses a Wi-Fi hotspot to connect several relay device. Then it is able to utilize the high bandwidth of Wi-Fi hotpot and transmit data with the Cellular links of all the devices in this system.</p>
-                            <p>I developed the high-speed parallel transmission system as a real-world prototype system on the Android platform. I evaluated the system in real-world with 4 GigaBytes data transmission and gained 2.5X bandwidth with 4 devices.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="25%"><img class="auto" src="./source/pptCtrl.png"></td>
-                        <td width="75%" valign="top">
-                            <p><strong>PPT Ctrl: an interactive PPT control APP</strong><br>
-                                advised by Prof. <a href="http://www.cs.sjtu.edu.cn/~linghe.kong/">Linghe Kong</a>, Sep. 2018 - Dec. 2018.</p>
-                            <p>PPT is a powerful media to convey ideas and share information in a broad array of scenarios. However, current PPT remote control tools are far from perfect. PPT Ctrl is a mobile application enabling people to control PPT in an interactive way. It has various functions including page switching, highlighting, magnifying, drawing, and real-time computer screen display.</p>
-                            <p>I developed this system from scratch in a team of four students as the team leader. The system is based on Qt and Android platform.</p>
-                            <p>This project won the first prize at the Chinese University Student Computer Application Ability Competition, 2019.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="25%"><img class="auto" src="./source/videoRetrieval.png"></td>
-                        <td width="75%" valign="top">
-                            <p><strong>Video clip retrieval by natural language</strong>
-                                <br>
-                                advised by Prof. <a href="http://icne.sjtu.edu.cn/info/1061/1075.htm">Yi Xu</a>, Apr. 2018 - Oct. 2018 <br></p>
-                            <p>Visual video and natural language understanding are two of the main efforts enabling computers to "think like humans". Video clip retrieval by natural language is an interdisciplinary task of these two fields. Its goal is: given a video and a query sentence, find the clip in the video described by the sentence.</p>
-                            <p>In this project, we proposed a spatial-textual coattention network to establish the interactions between words and spatial regions. We evaluated our model on the DiDeMo dataset and outperformed state-of-the-art methods by a significant margin.</p>
-                        </td>
-                    </tr> -->
-                </table>
-            </td>
-        </tr>
-        <!-- <tr>
-            <td> -->
-                <!-- Patent -->
-                <!-- <heading>Patent</heading>
-                <table class="oneLineSubsection">
-                    <tr>
-                        <td><strong>Jiakun Yan</strong>, Jingzhu Shao, Zhen Huang, Yanzhou Xiang, Yutong Liao, Ruohan Hu, Jin Qi, Shuo Jiang, "A vibrating alarm clock based on pressure sensors", Utility model ZL 2017 2  1300094.X, China[<a href="source/patent.pdf">pdf</a>]</td>
-                    </tr>
-                </table>
-            </td>
-        </tr> -->
-        <tr>
-            <td>
-                <!-- Scholarships -->
-                <heading>Scholarships and Awards</heading>
-                <table class="oneLineSubsection">
-                    <tr>
-                        <td><strong>A-class Scholarship for Excellent Academic Performance</strong> Awarded to top 1% students in SJTU every year, Shanghai Jiao Tong University, 2018</td>
-                    </tr>
-                    <tr>
-                        <td><strong>National Scholarship</strong> Highest honor for undergraduates in China, awarded to top 0.2% students, Ministry of Education of China, 2018 & 2019</td>
-                    </tr>
-                    <tr>
-                        <td><strong>1st Prize in Chinese Mathematics Competitions</strong> The first place among students in SJTU, Chinese Mathematical Society, 2018</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Zhiyuan Honorary Scholarship</strong> Elite program scholarship for top 5% talented students, Shanghai Jiao Tong University, 2018 and 2019</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <!-- <tr>
-            <td> -->
-                <!-- Awards -->
-                <!-- <heading>Awards</heading>
-                <table class="oneLineSubsection">
-                    <tr>
-                    	<td><strong>The First Price</strong>, Chinese University Student Computer Application Ability Competition, 2019</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Meritorious Winner</strong>, <a href="https://www.comap.com/undergraduate/contests/mcm/">Mathematical Contest in Modeling</a>, 2018</td>
-                    </tr>
-                </table>
-            </td>
-        </tr> -->
-        <!-- <tr>
-            <td> -->
-                <!-- Something -->
-                <!-- <heading>Something more about me</heading>
-                <table class="subsection">
-                    <tr>
-                        <td>
-                        I currently believe in rationality and emotional neutrality. I said "currently" because I also believe in lifelong development. Amazed by the beauty in logic and infinite possibility, I chose computer science as my major. Deciding to devote my life to an area I love, I have explored different areas of computer science, namely, artificial intelligence, computer networks, programming languages, and parallel computing in chronological order. In the process of my exploration, I found my interest gradually converging to computer systems and very likely programming languages and parallel computing. I am now applying for CS Ph.D. programs starting in Fall 2020.
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr> -->
-    </table>
-    <!-- <a href="https://clustrmaps.com/site/1b75x"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=4aWhnwzAzyImUEVCxfAPpo_o1_3b6QH1ziUd__e0uqQ&cl=ffffff" /></a> -->
-    <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=StXondYq_w8ojUa57wKQnxoPk4w3tnxrzlmn_YQHtdA&cl=ffffff&w=a"></script>
-    <!-- <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=4aWhnwzAzyImUEVCxfAPpo_o1_3b6QH1ziUd__e0uqQ&cl=ffffff&w=a"></script> -->
-</body>
+                        </p>
+                    </td>
+                    <td class="td-with-padding">
+                        <img src="source/xiangyuliu.png" id="Xiangyu-image" width="192" height="174">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="sub-table">
+                <tbody>
+                <tr>
+                    <td class="td-with-padding">
+                        <heading>Education</heading>
+                        <ul>
+                            <li>
+                                <span class="emphasis">Shanghai Jiao Tong University (SJTU)</span>, China
+                                <span class="align-right">Sep 2017 - Jun 2021 (Expected)</span>
+                                <p>Bachelor in Computer Science and Technology (GPA: 4.08/4.3, Rank: 1/150)</p>
+                                <p>Selected in Zhiyuan <span class="emphasis">Honors</span> Program of Engineering (Top
+                                    5%) </p>
+                            </li>
+                            <li>
+                                <span class="emphasis">University of California, Berkeley (UC Berkeley)</span>, USA<span
+                                    class="align-right">Jan 2020 - May 2020 </span>
+                                <p>Exchange student in EECS (GPA: 4.0/4.0) </p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
+                <!--					<tr>-->
+                <!--                        <td class="td-with-padding">-->
+                <!--                            <heading>Publications</heading>-->
+                <!--                            <ol>-->
+                <!--                                <li class="li-margin">-->
+                <!--                                    Lixin Yang, Jiasen Li, Wenqiang Xu, <strong>Yiqun Diao</strong>, and Cewu Lu. <a href="https://arxiv.org/abs/2008.05079">Bihand:Recovering hand mesh with multi-stage bisected hourglass networks.</a> ArXiv, abs/2008.05079, 2020.<span class="emphasis">[Accepted by BMVC2020]</span>-->
+                <!--                                </li>-->
+                <!--                            </ol>-->
+                <!--                        </td>-->
+                <!--                    </tr>-->
+
+                <tr>
+                    <td class="td-with-padding">
+                        <heading>Research Experience</heading>
+
+                        <p><span class="emphasis">Empathetic Reasoning in Multi-Agent Reinforcement Learning</span>
+                            <span class="align-right">Jun 2020 - Present</span> <br>
+                            Research Assistant, supervised by Professor <a href="http://wnzhang.net/">Weinan Zhang</a>,
+                            SJTU</p>
+                        <ul>
+                            <p>
+                                We introduced a novel concept of empathy to symmetric Markov games to achieve explicit
+                                cooperation among agents, where each agent reasons the evaluation of other agents
+                                through its own model. Considering the mutual reasoning between agents, the impact of
+                                empathy could be recursive. Our proposed algorithm is compatible with common RL
+                                frameworks, like Q-Learning or Actor-Critic.
+                                To verify our mechanism of empathy-based explicit cooperation, we tested our algorithm
+                                in a delicately designed math game and battle in <a
+                                    href="https://github.com/PettingZoo-Team/MAgent">MAgent</a>, where our algorithm can
+                                beat against popular baselines al least 70% times.
+
+                            </p>
+                        </ul>
+
+                        <p><span class="emphasis">Camouflaged Physical Attack</span> <span class="align-right">Jun 2020 - Sep 2020</span>
+                            <br>
+                            Independent Research, supervised by Professor <a
+                                    href="https://sites.google.com/site/csyisenwang/">Yisen Wang</a>, PKU</p>
+                        <ul>
+                            <p>
+                                We proposed an effective method to construct adversarial examples. Existing algorithms
+                                mainly focus on pixel-level optimization and ensure the generated
+                                images to be natural by carefully-designed objectives. This kind of algorithm does not
+                                pose any explicit constraints on the naturalness of generated samples and may lead to
+                                some strange images that will be quickly detected by humans. To overcome these
+                                shortcomings,
+                                We proposed manipulating high-level features, specifically the lightness and contrast.
+                                The
+                                carefully chosen high-level properties ensure that the modified images are still
+                                natural, and extensive
+                                experiments have verified our expectations.
+                            </p>
+                        </ul>
+
+                        <!--                        <p><span class="emphasis">Learning to Classify 3D Mesh</span> <span class="align-right">Jul 2019 - Jun 2020</span>-->
+                        <!--                            <br>-->
+                        <!--                            Research Assistant, supervised by Professor <a href="http://mvig.sjtu.edu.cn/">Cewu-->
+                        <!--                            Lu</a>, SJTU</p>-->
+                        <!--                        <ul>-->
+                        <!--                            <p>-->
+                        <!--                                This study aims to use new structures to extract 3D mesh information. Meshes are stored-->
+                        <!--                                in graph structure. It is still an open question how to effectively extract features in-->
+                        <!--                                graph. We published a <a href="https://arxiv.org/abs/2008.05079">paper</a> to recover 3D-->
+                        <!--                                hand mesh from RGB image, as an application for robotics.-->
+                        <!--                            </p>-->
+                        <!--                        </ul>-->
+
+                        <!--                        <p><span class="emphasis">Theoretical topic I read and summarized</span> <br>-->
+                        <!--                        </p>-->
+
+                        <!--                        <ul>-->
+                        <!--                            <p>-->
+                        <!--                                <a href="data/MCMC.pdf">MCMC Mixing Time on Treelike Graphs (my part) </a></p>-->
+
+                        <!--                            <p>-->
+                        <!--                                Research in algorithms and theory needs solid mathematical foundations. For-->
+                        <!--                                undergraduate, the first step is to read.-->
+                        <!--                            </p>-->
+                        <!--                            -->
+                        <!--                        </ul>-->
+
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="td-with-padding">
+                        <heading>Awards and Scholarships</heading>
+                        <ol>
+                            <li class="li-margin">
+                                National Scholarship (Top 0.2% in China)<span class="align-right">2018 & 2019</span>
+                                <!--                                <br>-->
+                                <!--                                Teaching Assistant in SJTU-->
+                            </li>
+                            <li class="li-margin">
+                                A-class Scholarship for Excellent Academic Performance (Top 1% at SJTU) <span
+                                    class="align-right">2018</span>
+                                <!--                                <br>-->
+                                <!--                                Teaching Assistant in SJTU-->
+                            </li>
+                            <li class="li-margin">
+                                1st Prize in Chinese College Mathematics Competitions (Top 1 at SJTU and selected for
+                                final)<span class="align-right">2018</span>
+                            </li>
+                            <li class="li-margin">
+                                2nd Prize in Chinese College Mathematics Competitions (Final) <span class="align-right">2019</span>
+                            </li>
+                            <li class="li-margin">
+                                Zhiyuan Honor Scholarship (Top 5% at SJTU) <span class="align-right">2018 & 2019 & 2020</span>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+<!--                <tr>-->
+<!--                    <td class="td-with-padding">-->
+<!--                        <heading>Miscellaneous</heading>-->
+<!--                        <p>-->
+<!--                            For sports, I like running and swimming. I also like literatures and films with realism-->
+<!--                            style.-->
+<!--                        </p>-->
+<!--                    </td>-->
+<!--                </tr>-->
+    <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=StXondYq_w8ojUa57wKQnxoPk4w3tnxrzlmn_YQHtdA&cl=ffffff&w=a"></script>
+
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
 </html>
